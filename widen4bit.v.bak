@@ -1,0 +1,8 @@
+module widen4bit(X,Y);
+	input X;
+	output [3:0] Y;
+	
+	assign Y[0]=X;
+	assign Y[3:1]=3'b000;
+	
+endmodule

@@ -1,0 +1,13 @@
+module Counter_1bit_1(F, X, Sum);
+	input F;//bit ngo vao
+	input X;//bit trang thai ke tiep
+	output [4:0] Sum;//so bit 1 xuat ra ngoai
+	
+	//and u1(X, 1'b1, 1'b1);
+	not u2(temp1, F);
+	and u3(Y, temp1, X);
+	and u4(X, Y, 1'b1);
+	
+endmodule
+
+	

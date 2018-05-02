@@ -1,0 +1,313 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/xx
+vadd_sub_floating
+!s110 1524303074
+!i10b 1
+!s100 8U[^nkPXD`LEjXkiALDSP1
+IN<H>2=1^YkdONd7@FRE=d1
+Z0 VDg1SIo80bB@j0V0VzS_@n1
+Z1 dD:/Final Test
+w1524298476
+8D:/Final Test/add_sub_floating.v
+FD:/Final Test/add_sub_floating.v
+L0 2
+Z2 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1524303073.000000
+!s107 D:/Final Test/add_sub_floating.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Final Test/add_sub_floating.v|
+!i113 1
+Z3 o-work work
+Z4 tCvgOpt 0
+vBrain
+!s110 1524313532
+!i10b 1
+!s100 _79`1blYS]i`N7i9W1OXD3
+IS_G[gE3cTYdPg8TiF2RU=1
+R0
+R1
+w1524313423
+8D:/Final Test/Brain.v
+FD:/Final Test/Brain.v
+L0 2
+R2
+r1
+!s85 0
+31
+!s108 1524313532.000000
+!s107 D:/Final Test/Brain.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Final Test/Brain.v|
+!i113 1
+R3
+R4
+n@brain
+vbu2_28bit
+!s110 1524154023
+!i10b 1
+!s100 3n4j>:a<[M_2`^fzQl8S_3
+IcPeGYG>J`h5?AjoDEV0S02
+R0
+R1
+w1524153761
+8D:\Final Test\bu2_28bit.v
+FD:\Final Test\bu2_28bit.v
+L0 2
+R2
+r1
+!s85 0
+31
+!s108 1524154023.000000
+!s107 D:\Final Test\bu2_28bit.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:\Final Test\bu2_28bit.v|
+!i113 1
+R3
+R4
+vCLA
+Z5 !s110 1524233653
+!i10b 1
+!s100 9;^oF]UG5_D@6J=QQJ]aU3
+IAVC:`Yeogeb6eMl9T:nOg0
+R0
+R1
+w1524233592
+8D:/Final Test/CLA.v
+FD:/Final Test/CLA.v
+L0 5
+R2
+r1
+!s85 0
+31
+Z6 !s108 1524233653.000000
+!s107 D:/Final Test/CLA.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Final Test/CLA.v|
+!i113 1
+R3
+R4
+n@c@l@a
+vCLA28bits
+!s110 1524190302
+!i10b 1
+!s100 IS0HCMCNc^c^k=5k><S]11
+Ig@L;gLPTDloVL<;flBE382
+R0
+R1
+w1524190283
+8D:/Final Test/CLA28bits.v
+FD:/Final Test/CLA28bits.v
+L0 1
+R2
+r1
+!s85 0
+31
+!s108 1524190302.000000
+!s107 D:/Final Test/CLA28bits.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Final Test/CLA28bits.v|
+!i113 1
+R3
+R4
+n@c@l@a28bits
+vCLA5bit
+R5
+!i10b 1
+!s100 T3LcE71l^H3zfPSzWBDNl3
+I>omi_bi?ioG2^GgNHjVNL0
+R0
+R1
+w1524233649
+8D:/Final Test/CLA5bit.v
+FD:/Final Test/CLA5bit.v
+L0 1
+R2
+r1
+!s85 0
+31
+R6
+!s107 D:/Final Test/CLA5bit.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Final Test/CLA5bit.v|
+!i113 1
+R3
+R4
+n@c@l@a5bit
+vCounter_1bit_1
+!s110 1524209699
+!i10b 1
+!s100 RZL]alKRBSAbzXUVa^i2z0
+IlHE3BO;Ljigm6X7HlT[NS1
+R0
+R1
+w1524196203
+8D:/Final Test/Counter_1bit_1.v
+FD:/Final Test/Counter_1bit_1.v
+L0 6
+R2
+r1
+!s85 0
+31
+!s108 1524209699.000000
+!s107 D:/Final Test/Counter_1bit_1.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Final Test/Counter_1bit_1.v|
+!i113 1
+R3
+R4
+n@counter_1bit_1
+vCounter_23bit_1
+!s110 1524317085
+!i10b 1
+!s100 EWbT<fVX8>>d1hSG7F2PU3
+I_m839HJdj2=1ZK`DbCYiU3
+R0
+R1
+w1524317073
+8D:/Final Test/Counter_23bit_1.v
+FD:/Final Test/Counter_23bit_1.v
+L0 1
+R2
+r1
+!s85 0
+31
+!s108 1524317084.000000
+!s107 D:/Final Test/Counter_23bit_1.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Final Test/Counter_23bit_1.v|
+!i113 1
+R3
+R4
+n@counter_23bit_1
+vMux4to1
+Z7 !s110 1524150820
+!i10b 1
+!s100 458dQOefMVF_]OPCW8nCZ2
+I@lRKPQ<MMmN9NRGR2o0jK0
+R0
+R1
+w1523948760
+8D:/Final Test/Mux4to1.v
+FD:/Final Test/Mux4to1.v
+L0 1
+R2
+r1
+!s85 0
+31
+Z8 !s108 1524150820.000000
+!s107 D:/Final Test/Mux4to1.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Final Test/Mux4to1.v|
+!i113 1
+R3
+R4
+n@mux4to1
+vshift24bit
+R7
+!i10b 1
+!s100 I3I5ghESLDfRA^^`>JO=X2
+IbOd@8P>IOBEz3U3U?[1z52
+R0
+R1
+w1523945043
+8D:/Final Test/shift24bit.v
+FD:/Final Test/shift24bit.v
+L0 1
+R2
+r1
+!s85 0
+31
+R8
+!s107 D:/Final Test/shift24bit.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Final Test/shift24bit.v|
+!i113 1
+R3
+R4
+vshift_left
+!s110 1524238555
+!i10b 1
+!s100 UienZPH_G`TI`eBz1ULUQ0
+IAE7nICncZQeGS;n3J8hV20
+R0
+R1
+w1524238549
+8D:/Final Test/shift_left.v
+FD:/Final Test/shift_left.v
+L0 2
+R2
+r1
+!s85 0
+31
+!s108 1524238555.000000
+!s107 D:/Final Test/shift_left.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Final Test/shift_left.v|
+!i113 1
+R3
+R4
+vSub
+!s110 1524150821
+!i10b 1
+!s100 hISfcYDMDZTn:Cd?=E_>O0
+I8mO2JhCm^1Qe5J8WVYTQG0
+R0
+R1
+w1524141514
+8D:/Final Test/Sub.v
+FD:/Final Test/Sub.v
+L0 11
+R2
+r1
+!s85 0
+31
+R8
+!s107 D:/Final Test/Sub.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Final Test/Sub.v|
+!i113 1
+R3
+R4
+n@sub
+vSub28bits
+!s110 1524191060
+!i10b 1
+!s100 HJf@YfKilD:ZEGe5WH_<H0
+IH]XHa3=];H`Ed65R=o6@l1
+R0
+R1
+w1524191031
+8D:/Final Test/Sub28bits.v
+FD:/Final Test/Sub28bits.v
+L0 1
+R2
+r1
+!s85 0
+31
+!s108 1524191060.000000
+!s107 D:/Final Test/Sub28bits.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Final Test/Sub28bits.v|
+!i113 1
+R3
+R4
+n@sub28bits
+vwiden5bit
+!s110 1524209757
+!i10b 1
+!s100 a;O9DILVm?dNflAz`Rm[G0
+INAF1?>c:Fg:OL==H8e2QT3
+R0
+R1
+w1524209752
+8D:\Final Test\widen4bit.v
+FD:\Final Test\widen4bit.v
+L0 1
+R2
+r1
+!s85 0
+31
+!s108 1524209757.000000
+!s107 D:\Final Test\widen4bit.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:\Final Test\widen4bit.v|
+!i113 1
+R3
+R4

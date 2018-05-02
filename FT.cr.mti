@@ -1,0 +1,99 @@
+{D:/Final Test/Counter_1bit_1.v} {1 {vlog -work work -stats=none {D:/Final Test/Counter_1bit_1.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module Counter_1bit_1
+
+Top level modules:
+	Counter_1bit_1
+
+} {} {}} {D:/Final Test/shift_left.v} {1 {vlog -work work -stats=none {D:/Final Test/shift_left.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module shift_left
+
+Top level modules:
+	shift_left
+
+} {} {}} {D:/Final Test/bu2_28bit.v} {1 {vlog -work work -stats=none {D:\Final Test\bu2_28bit.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module bu2_28bit
+
+Top level modules:
+	bu2_28bit
+
+} {} {}} {D:/Final Test/shift24bit.v} {1 {vlog -work work -stats=none {D:/Final Test/shift24bit.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module shift24bit
+
+Top level modules:
+	shift24bit
+
+} {} {}} {D:/Final Test/CLA28bits.v} {1 {vlog -work work -stats=none {D:/Final Test/CLA28bits.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module CLA28bits
+
+Top level modules:
+	CLA28bits
+
+} {} {}} {D:/Final Test/add_sub_floating.v} {1 {vlog -work work -stats=none {D:/Final Test/add_sub_floating.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module add_sub_floating
+
+Top level modules:
+	add_sub_floating
+
+} {} {}} {D:/Final Test/Sub28bits.v} {1 {vlog -work work -stats=none {D:/Final Test/Sub28bits.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module Sub28bits
+
+Top level modules:
+	Sub28bits
+
+} {} {}} {D:/Final Test/CLA.v} {1 {vlog -work work -stats=none {D:/Final Test/CLA.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module CLA
+
+Top level modules:
+	CLA
+
+} {} {}} {D:/Final Test/Mux4to1.v} {1 {vlog -work work -stats=none {D:/Final Test/Mux4to1.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module Mux4to1
+
+Top level modules:
+	Mux4to1
+
+} {} {}} {D:/Final Test/Sub.v} {1 {vlog -work work -stats=none {D:/Final Test/Sub.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module Sub
+
+Top level modules:
+	Sub
+
+} {} {}} {D:/Final Test/widen4bit.v} {1 {vlog -work work -stats=none {D:\Final Test\widen4bit.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module widen5bit
+
+Top level modules:
+	widen5bit
+
+} {} {}} {D:/Final Test/Counter_23bit_1.v} {1 {vlog -work work -stats=none {D:/Final Test/Counter_23bit_1.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module Counter_23bit_1
+
+Top level modules:
+	Counter_23bit_1
+
+} {} {}} {D:/Final Test/CLA5bit.v} {1 {vlog -work work -stats=none {D:/Final Test/CLA5bit.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module CLA5bit
+
+Top level modules:
+	CLA5bit
+
+} {} {}} {D:/Final Test/Brain.v} {1 {vlog -work work -stats=none {D:/Final Test/Brain.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module Brain
+
+Top level modules:
+	Brain
+
+} {} {}}

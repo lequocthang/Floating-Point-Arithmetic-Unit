@@ -1,0 +1,42 @@
+module Counter_23bit_1(F, X, Sum);
+	input [23:0] F;//bit ngo vao
+	input X;//bit trang thai ke tiep
+	output [4:0] Sum;//so bit 1 xuat ra ngoai
+	
+	wire [23:0] Q,//dung de chua cac gia tri 1 hoac 0 khi thuc hien phat hien so bit 1
+					X_next;//trang thai ke tiep cua X
+	//assign X=1'b1;
+	Counter_1bit_1 count1(.F(F[23]), .X(1'b1), .X_next(X_next[0]), .Y(Q[0]));
+	Counter_1bit_1 count2(.F(F[22]), .X(X_next[0]), X_next(X_next[1]), .Y(Q[1]));
+	Counter_1bit_1 count3(.F(F[21]), .X(X_next[1]), .X_next(X_next[2]), .Y(Q[2]));
+	Counter_1bit_1 count4(.F(F[20]), .X(X_next[2]), X_next(X_next[3]), .Y(Q[3]));
+	
+	Counter_1bit_1 count5(.F(F[19]), .X(X_next[3]), X_next(X_next[4]), .Y(Q[4]));
+	Counter_1bit_1 count6(.F(F[18]), .X(X_next[4]), .X_next(X_next[5]), .Y(Q[5]));
+	Counter_1bit_1 count7(.F(F[17]), .X(X_next[5]), X_next(X_next[6]), .Y(Q[6]));
+	Counter_1bit_1 count8(.F(F[16]), .X(X_next[6]), X_next(X_next[7]), .Y(Q[7]));
+	
+	Counter_1bit_1 count9(.F(F[15]), .X(X_next[7]), X_next(X_next[8]), .Y(Q[8]));
+	Counter_1bit_1 count10(.F(F[14]), .X(X_next[8]), .X_next(X_next[9]), .Y(Q[9]));
+	Counter_1bit_1 count11(.F(F[13]), .X(X_next[9]), X_next(X_next[10]), .Y(Q[10]));
+	Counter_1bit_1 count12(.F(F[12]), .X(X_next[10]), X_next(X_next[11]), .Y(Q[11]));
+	
+	Counter_1bit_1 count13(.F(F[11]), .X(X_next[11]), X_next(X_next[12]), .Y(Q[12]));
+	Counter_1bit_1 count14(.F(F[10]), .X(X_next[12]), .X_next(X_next[13]), .Y(Q[13]));
+	Counter_1bit_1 count15(.F(F[9]), .X(X_next[13]), X_next(X_next[14]), .Y(Q[14]));
+	Counter_1bit_1 count16(.F(F[8]), .X(X_next[14]), X_next(X_next[15]), .Y(Q[15]));
+	
+	Counter_1bit_1 count17(.F(F[7]), .X(X_next[15]), X_next(X_next[16]), .Y(Q[16]));
+	Counter_1bit_1 count18(.F(F[6]), .X(X_next[16]), .X_next(X_next[17]), .Y(Q[17]));
+	Counter_1bit_1 count19(.F(F[5]), .X(X_next[17]), X_next(X_next[18]), .Y(Q[18]));
+	Counter_1bit_1 count20(.F(F[4]), .X(X_next[18]), X_next(X_next[19]), .Y(Q[19]));
+	
+	Counter_1bit_1 count21(.F(F[3]), .X(X_next[19]), X_next(X_next[20]), .Y(Q[20]));
+	Counter_1bit_1 count22(.F(F[2]), .X(X_next[20]), .X_next(X_next[21]), .Y(Q[21]));
+	Counter_1bit_1 count23(.F(F[1]), .X(X_next[21]), X_next(X_next[22]), .Y(Q[22]));
+	Counter_1bit_1 count24(.F(F[0]), .X(X_next[22]), X_next(X_next[23]), .Y(Q[23]));
+	
+	
+	
+	
+	

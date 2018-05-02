@@ -1,0 +1,4 @@
+Info (10281): Verilog HDL Declaration information at Mux4to1.v(2): object "a" differs only in case from object "A" in the same scope File: D:/Final Test/Mux4to1.v Line: 2
+Info (10281): Verilog HDL Declaration information at Mux4to1.v(2): object "b" differs only in case from object "B" in the same scope File: D:/Final Test/Mux4to1.v Line: 2
+Info (10281): Verilog HDL Declaration information at Mux4to1.v(2): object "o" differs only in case from object "O" in the same scope File: D:/Final Test/Mux4to1.v Line: 2
+Info (10281): Verilog HDL Declaration information at Mux4to1.v(2): object "s" differs only in case from object "S" in the same scope File: D:/Final Test/Mux4to1.v Line: 2

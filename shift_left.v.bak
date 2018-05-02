@@ -1,0 +1,12 @@
+//thuc hien dich tu phai sang trai de cho ra ket qua chuan hoa cuoi cung
+module shift_left(Sel, F, Q);
+	input [4:0] Sel;//so bit can dich la Sel
+	input [23:0] F;//ngo vao can thuc hien dich bit
+	output [23:0] Q;//ngo ra
+	
+	wire [0:23] daobit;
+	wire [0:23] temp;
+	assign daobit[0:23]=F[23:0];
+	shift24bit u1(.Sel(Sel), .F(daobit), .Q(temp));
+	assign Q[23:0]=temp[0:23];
+endmodule

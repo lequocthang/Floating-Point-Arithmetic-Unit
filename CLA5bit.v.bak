@@ -1,0 +1,18 @@
+module CLA5bit(X, Y, Ci, Co, Sum);
+	input [4:0] X, Y; //ngo vao hai so 4 bits
+	input Ci; //co nho ngo vao
+	output [4:0] Sum;//ngo ra 4 bits
+	output [4:0] Co; //co nho ngo ra
+	wire [4:0] Pi, Gi; //lan luot la carry propagate va carry generate
+	//reg [3:0] i; //bien dem bit thu i
+	//wire [1:0] selec; //bien lua chon trong bo mux4to1
+	
+	CLA cla1(.X(X[3:0]), .Y(Y[3:0]), .Ci(0), .Co(Co[3:0]), .Sum(Sum[3:0]));
+	
+	xor xor1(Pi[4], X[4], Y[4]);
+	and and1(Gi[4], X[4], Y[4]);
+	and and2(temp1, Pi[4], Co[3]); 
+	or or1(Co[4], Gi[4], temp1);
+	xor xor2(Sum[4], Pi[4], Co[3]);
+	
+endmodule

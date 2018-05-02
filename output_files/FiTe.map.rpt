@@ -1,0 +1,774 @@
+Analysis & Synthesis report for FiTe
+Sat Apr 21 16:29:16 2018
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Port Connectivity Checks: "Sub28bits:Sub8"
+ 10. Port Connectivity Checks: "CLA28bits:CLA7"
+ 11. Port Connectivity Checks: "Sub28bits:Sub6"
+ 12. Port Connectivity Checks: "CLA28bits:CLA5"
+ 13. Port Connectivity Checks: "Sub28bits:Sub2"
+ 14. Port Connectivity Checks: "CLA28bits:CLA4"
+ 15. Port Connectivity Checks: "Sub28bits:Sub1|Sub:sub6"
+ 16. Port Connectivity Checks: "Sub28bits:Sub1|Sub:sub5"
+ 17. Port Connectivity Checks: "Sub28bits:Sub1|Sub:sub4"
+ 18. Port Connectivity Checks: "Sub28bits:Sub1|Sub:sub3"
+ 19. Port Connectivity Checks: "Sub28bits:Sub1|Sub:sub2"
+ 20. Port Connectivity Checks: "Sub28bits:Sub1|Sub:sub1"
+ 21. Port Connectivity Checks: "Sub28bits:Sub1"
+ 22. Port Connectivity Checks: "CLA28bits:CLA3"
+ 23. Port Connectivity Checks: "shift24bit:sh1"
+ 24. Port Connectivity Checks: "CLA28bits:CLA2"
+ 25. Port Connectivity Checks: "CLA28bits:CLA1|CLA:CLA6"
+ 26. Port Connectivity Checks: "CLA28bits:CLA1|CLA:CLA5"
+ 27. Port Connectivity Checks: "CLA28bits:CLA1|CLA:CLA4"
+ 28. Port Connectivity Checks: "CLA28bits:CLA1|CLA:CLA3"
+ 29. Port Connectivity Checks: "CLA28bits:CLA1|CLA:CLA2"
+ 30. Port Connectivity Checks: "CLA28bits:CLA1|CLA:CLA1"
+ 31. Port Connectivity Checks: "CLA28bits:CLA1"
+ 32. Port Connectivity Checks: "bu2_28bit:bu2"
+ 33. Port Connectivity Checks: "bu2_28bit:bu1|CLA:CLA6"
+ 34. Port Connectivity Checks: "bu2_28bit:bu1|CLA:CLA5"
+ 35. Port Connectivity Checks: "bu2_28bit:bu1|CLA:CLA4"
+ 36. Port Connectivity Checks: "bu2_28bit:bu1|CLA:cla3"
+ 37. Port Connectivity Checks: "bu2_28bit:bu1|CLA:cla2"
+ 38. Port Connectivity Checks: "bu2_28bit:bu1|CLA:cla1"
+ 39. Port Connectivity Checks: "bu2_28bit:bu1"
+ 40. Post-Synthesis Netlist Statistics for Top Partition
+ 41. Elapsed Time Per Partition
+ 42. Analysis & Synthesis Messages
+ 43. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Sat Apr 21 16:29:16 2018       ;
+; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
+; Revision Name                   ; FiTe                                        ;
+; Top-level Entity Name           ; add_sub_floating                            ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 0                                           ;
+; Total pins                      ; 258                                         ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CGXFC7C7F23C8     ;                    ;
+; Top-level entity name                                                           ; add_sub_floating   ; FiTe               ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                   ;
++----------------------------------+-----------------+------------------------+----------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path     ; Library ;
++----------------------------------+-----------------+------------------------+----------------------------------+---------+
+; Sub28bits.v                      ; yes             ; User Verilog HDL File  ; D:/Final Test/Sub28bits.v        ;         ;
+; Sub.v                            ; yes             ; User Verilog HDL File  ; D:/Final Test/Sub.v              ;         ;
+; shift24bit.v                     ; yes             ; User Verilog HDL File  ; D:/Final Test/shift24bit.v       ;         ;
+; CLA28bits.v                      ; yes             ; User Verilog HDL File  ; D:/Final Test/CLA28bits.v        ;         ;
+; CLA.v                            ; yes             ; User Verilog HDL File  ; D:/Final Test/CLA.v              ;         ;
+; bu2_28bit.v                      ; yes             ; User Verilog HDL File  ; D:/Final Test/bu2_28bit.v        ;         ;
+; add_sub_floating.v               ; yes             ; User Verilog HDL File  ; D:/Final Test/add_sub_floating.v ;         ;
++----------------------------------+-----------------+------------------------+----------------------------------+---------+
+
+
++----------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                ;
++---------------------------------------------+------------------------------+
+; Resource                                    ; Usage                        ;
++---------------------------------------------+------------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 405                          ;
+;                                             ;                              ;
+; Combinational ALUT usage for logic          ; 633                          ;
+;     -- 7 input functions                    ; 0                            ;
+;     -- 6 input functions                    ; 177                          ;
+;     -- 5 input functions                    ; 112                          ;
+;     -- 4 input functions                    ; 175                          ;
+;     -- <=3 input functions                  ; 169                          ;
+;                                             ;                              ;
+; Dedicated logic registers                   ; 0                            ;
+;                                             ;                              ;
+; I/O pins                                    ; 258                          ;
+;                                             ;                              ;
+; Total DSP Blocks                            ; 0                            ;
+;                                             ;                              ;
+; Maximum fan-out node                        ; CLA28bits:CLA1|CLA:CLA1|xor1 ;
+; Maximum fan-out                             ; 112                          ;
+; Total fan-out                               ; 3166                         ;
+; Average fan-out                             ; 2.76                         ;
++---------------------------------------------+------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                               ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------+------------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                       ; Entity Name      ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------+------------------+--------------+
+; |add_sub_floating          ; 633 (0)             ; 0 (0)                     ; 0                 ; 0          ; 258  ; 0            ; |add_sub_floating                         ; add_sub_floating ; work         ;
+;    |CLA28bits:CLA1|        ; 8 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_floating|CLA28bits:CLA1          ; CLA28bits        ; work         ;
+;       |CLA:CLA1|           ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_floating|CLA28bits:CLA1|CLA:CLA1 ; CLA              ; work         ;
+;       |CLA:CLA2|           ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_floating|CLA28bits:CLA1|CLA:CLA2 ; CLA              ; work         ;
+;    |CLA28bits:CLA2|        ; 7 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_floating|CLA28bits:CLA2          ; CLA28bits        ; work         ;
+;       |CLA:CLA1|           ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_floating|CLA28bits:CLA2|CLA:CLA1 ; CLA              ; work         ;
+;       |CLA:CLA2|           ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_floating|CLA28bits:CLA2|CLA:CLA2 ; CLA              ; work         ;
+;    |CLA28bits:CLA3|        ; 72 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_floating|CLA28bits:CLA3          ; CLA28bits        ; work         ;
+;       |CLA:CLA1|           ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_floating|CLA28bits:CLA3|CLA:CLA1 ; CLA              ; work         ;
+;       |CLA:CLA2|           ; 13 (13)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_floating|CLA28bits:CLA3|CLA:CLA2 ; CLA              ; work         ;
+;       |CLA:CLA3|           ; 14 (14)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_floating|CLA28bits:CLA3|CLA:CLA3 ; CLA              ; work         ;
+;       |CLA:CLA4|           ; 14 (14)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_floating|CLA28bits:CLA3|CLA:CLA4 ; CLA              ; work         ;
+;       |CLA:CLA5|           ; 14 (14)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_floating|CLA28bits:CLA3|CLA:CLA5 ; CLA              ; work         ;
+;       |CLA:CLA6|           ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_floating|CLA28bits:CLA3|CLA:CLA6 ; CLA              ; work         ;
+;    |CLA28bits:CLA5|        ; 73 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_floating|CLA28bits:CLA5          ; CLA28bits        ; work         ;
+;       |CLA:CLA1|           ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_floating|CLA28bits:CLA5|CLA:CLA1 ; CLA              ; work         ;
+;       |CLA:CLA2|           ; 13 (13)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_floating|CLA28bits:CLA5|CLA:CLA2 ; CLA              ; work         ;
+;       |CLA:CLA3|           ; 16 (16)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_floating|CLA28bits:CLA5|CLA:CLA3 ; CLA              ; work         ;
+;       |CLA:CLA4|           ; 13 (13)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_floating|CLA28bits:CLA5|CLA:CLA4 ; CLA              ; work         ;
+;       |CLA:CLA5|           ; 14 (14)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_floating|CLA28bits:CLA5|CLA:CLA5 ; CLA              ; work         ;
+;       |CLA:CLA6|           ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_floating|CLA28bits:CLA5|CLA:CLA6 ; CLA              ; work         ;
+;    |Sub28bits:Sub1|        ; 52 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_floating|Sub28bits:Sub1          ; Sub28bits        ; work         ;
+;       |Sub:sub1|           ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_floating|Sub28bits:Sub1|Sub:sub1 ; Sub              ; work         ;
+;       |Sub:sub2|           ; 11 (11)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_floating|Sub28bits:Sub1|Sub:sub2 ; Sub              ; work         ;
+;       |Sub:sub3|           ; 10 (10)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_floating|Sub28bits:Sub1|Sub:sub3 ; Sub              ; work         ;
+;       |Sub:sub4|           ; 10 (10)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_floating|Sub28bits:Sub1|Sub:sub4 ; Sub              ; work         ;
+;       |Sub:sub5|           ; 10 (10)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_floating|Sub28bits:Sub1|Sub:sub5 ; Sub              ; work         ;
+;       |Sub:sub6|           ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_floating|Sub28bits:Sub1|Sub:sub6 ; Sub              ; work         ;
+;    |Sub28bits:Sub6|        ; 53 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_floating|Sub28bits:Sub6          ; Sub28bits        ; work         ;
+;       |Sub:sub1|           ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_floating|Sub28bits:Sub6|Sub:sub1 ; Sub              ; work         ;
+;       |Sub:sub2|           ; 11 (11)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_floating|Sub28bits:Sub6|Sub:sub2 ; Sub              ; work         ;
+;       |Sub:sub3|           ; 12 (12)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_floating|Sub28bits:Sub6|Sub:sub3 ; Sub              ; work         ;
+;       |Sub:sub4|           ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_floating|Sub28bits:Sub6|Sub:sub4 ; Sub              ; work         ;
+;       |Sub:sub5|           ; 10 (10)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_floating|Sub28bits:Sub6|Sub:sub5 ; Sub              ; work         ;
+;       |Sub:sub6|           ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_floating|Sub28bits:Sub6|Sub:sub6 ; Sub              ; work         ;
+;    |bu2_28bit:bu1|         ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_floating|bu2_28bit:bu1           ; bu2_28bit        ; work         ;
+;       |CLA:cla1|           ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_floating|bu2_28bit:bu1|CLA:cla1  ; CLA              ; work         ;
+;    |bu2_28bit:bu2|         ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_floating|bu2_28bit:bu2           ; bu2_28bit        ; work         ;
+;       |CLA:cla1|           ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_floating|bu2_28bit:bu2|CLA:cla1  ; CLA              ; work         ;
+;    |shift24bit:sh1|        ; 178 (178)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_floating|shift24bit:sh1          ; shift24bit       ; work         ;
+;    |shift24bit:sh2|        ; 188 (188)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |add_sub_floating|shift24bit:sh2          ; shift24bit       ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------+------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Sub28bits:Sub8"                                                                                          ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Ci   ; Input  ; Info     ; Stuck at GND                                                                                             ;
+; Co   ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "CLA28bits:CLA7"                                                                                          ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Ci   ; Input  ; Info     ; Stuck at GND                                                                                             ;
+; Co   ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Sub28bits:Sub6"                                                                                          ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Ci   ; Input  ; Info     ; Stuck at GND                                                                                             ;
+; Co   ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "CLA28bits:CLA5"                                                                                          ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Ci   ; Input  ; Info     ; Stuck at GND                                                                                             ;
+; Co   ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Sub28bits:Sub2"                                                                                          ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Ci   ; Input  ; Info     ; Stuck at GND                                                                                             ;
+; Co   ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "CLA28bits:CLA4"                                                                                          ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Ci   ; Input  ; Info     ; Stuck at GND                                                                                             ;
+; Co   ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Sub28bits:Sub1|Sub:sub6"                                                                ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Co[2..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Sub28bits:Sub1|Sub:sub5"                                                                ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Co[2..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Sub28bits:Sub1|Sub:sub4"                                                                ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Co[2..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Sub28bits:Sub1|Sub:sub3"                                                                ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Co[2..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Sub28bits:Sub1|Sub:sub2"                                                                ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Co[2..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Sub28bits:Sub1|Sub:sub1"                                                                ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Co[2..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Sub28bits:Sub1"                                                                                          ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Ci   ; Input  ; Info     ; Stuck at GND                                                                                             ;
+; Co   ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "CLA28bits:CLA3"                                                                                           ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                                                  ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; A[23] ; Input  ; Info     ; Stuck at VCC                                                                                             ;
+; Ci    ; Input  ; Info     ; Stuck at GND                                                                                             ;
+; Co    ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------+
+; Port Connectivity Checks: "shift24bit:sh1" ;
++-------+-------+----------+-----------------+
+; Port  ; Type  ; Severity ; Details         ;
++-------+-------+----------+-----------------+
+; F[23] ; Input ; Info     ; Stuck at VCC    ;
++-------+-------+----------+-----------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "CLA28bits:CLA2"                                                                                              ;
++----------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                                                  ;
++----------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Ci       ; Input  ; Info     ; Stuck at GND                                                                                             ;
+; F[23..5] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
+; Co       ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "CLA28bits:CLA1|CLA:CLA6"                                                                ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Co[2..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "CLA28bits:CLA1|CLA:CLA5"                                                                ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Co[2..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "CLA28bits:CLA1|CLA:CLA4"                                                                ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Co[2..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "CLA28bits:CLA1|CLA:CLA3"                                                                ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Co[2..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "CLA28bits:CLA1|CLA:CLA2"                                                                ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Co[2..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "CLA28bits:CLA1|CLA:CLA1"                                                                ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Co[2..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "CLA28bits:CLA1"                                                                                              ;
++----------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                                                  ;
++----------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Ci       ; Input  ; Info     ; Stuck at GND                                                                                             ;
+; F[23..5] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
+; Co       ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------+
+; Port Connectivity Checks: "bu2_28bit:bu2"  ;
++----------+-------+----------+--------------+
+; Port     ; Type  ; Severity ; Details      ;
++----------+-------+----------+--------------+
+; X[23..8] ; Input ; Info     ; Stuck at GND ;
++----------+-------+----------+--------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "bu2_28bit:bu1|CLA:CLA6"                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Y    ; Input  ; Info     ; Stuck at GND                                                                        ;
+; Co   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "bu2_28bit:bu1|CLA:CLA5"                                                                 ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Y        ; Input  ; Info     ; Stuck at GND                                                                        ;
+; Co[2..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "bu2_28bit:bu1|CLA:CLA4"                                                                 ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Y        ; Input  ; Info     ; Stuck at GND                                                                        ;
+; Co[2..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "bu2_28bit:bu1|CLA:cla3"                                                                 ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Y        ; Input  ; Info     ; Stuck at GND                                                                        ;
+; Co[2..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "bu2_28bit:bu1|CLA:cla2"                                                                 ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Y        ; Input  ; Info     ; Stuck at GND                                                                        ;
+; Co[2..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "bu2_28bit:bu1|CLA:cla1"                                                                                                                                                                ;
++----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                                                                                                                            ;
++----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Y[3..1]  ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; Y[0]     ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                       ;
+; Ci       ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; Ci[-1]   ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; Co[2..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                ;
++----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------+
+; Port Connectivity Checks: "bu2_28bit:bu1"  ;
++----------+-------+----------+--------------+
+; Port     ; Type  ; Severity ; Details      ;
++----------+-------+----------+--------------+
+; X[23..8] ; Input ; Info     ; Stuck at GND ;
++----------+-------+----------+--------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_lcell_comb     ; 634                         ;
+;     normal            ; 634                         ;
+;         0 data inputs ; 1                           ;
+;         2 data inputs ; 113                         ;
+;         3 data inputs ; 56                          ;
+;         4 data inputs ; 175                         ;
+;         5 data inputs ; 112                         ;
+;         6 data inputs ; 177                         ;
+; boundary_port         ; 258                         ;
+;                       ;                             ;
+; Max LUT depth         ; 12.00                       ;
+; Average LUT depth     ; 10.97                       ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:04     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+    Info: Processing started: Sat Apr 21 16:28:50 2018
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FiTe -c FiTe
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file sub28bits.v
+    Info (12023): Found entity 1: Sub28bits File: D:/Final Test/Sub28bits.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file sub.v
+    Info (12023): Found entity 1: Sub File: D:/Final Test/Sub.v Line: 11
+Info (12021): Found 1 design units, including 1 entities, in source file shift24bit.v
+    Info (12023): Found entity 1: shift24bit File: D:/Final Test/shift24bit.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mux4to1.v
+    Info (12023): Found entity 1: Mux4to1 File: D:/Final Test/Mux4to1.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file cla28bits.v
+    Info (12023): Found entity 1: CLA28bits File: D:/Final Test/CLA28bits.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file cla.v
+    Info (12023): Found entity 1: CLA File: D:/Final Test/CLA.v Line: 5
+Info (12021): Found 1 design units, including 1 entities, in source file bu2_28bit.v
+    Info (12023): Found entity 1: bu2_28bit File: D:/Final Test/bu2_28bit.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file add_sub_floating.v
+    Info (12023): Found entity 1: add_sub_floating File: D:/Final Test/add_sub_floating.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file counter_1bit_1.v
+    Info (12023): Found entity 1: Counter_1bit_1 File: D:/Final Test/Counter_1bit_1.v Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file counter_23bit_1.v
+    Info (12023): Found entity 1: Counter_23bit_1 File: D:/Final Test/Counter_23bit_1.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file widen4bit.v
+    Info (12023): Found entity 1: widen5bit File: D:/Final Test/widen4bit.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file cla5bit.v
+    Info (12023): Found entity 1: CLA5bit File: D:/Final Test/CLA5bit.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file shift_left.v
+    Info (12023): Found entity 1: shift_left File: D:/Final Test/shift_left.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file brain.v
+    Info (12023): Found entity 1: Brain File: D:/Final Test/Brain.v Line: 2
+Warning (10236): Verilog HDL Implicit Net warning at Sub.v(19): created implicit net for "tepmnot1" File: D:/Final Test/Sub.v Line: 19
+Warning (10236): Verilog HDL Implicit Net warning at Sub.v(22): created implicit net for "temp1" File: D:/Final Test/Sub.v Line: 22
+Warning (10236): Verilog HDL Implicit Net warning at Sub.v(24): created implicit net for "temp100" File: D:/Final Test/Sub.v Line: 24
+Warning (10236): Verilog HDL Implicit Net warning at Sub.v(30): created implicit net for "tempnot2" File: D:/Final Test/Sub.v Line: 30
+Warning (10236): Verilog HDL Implicit Net warning at Sub.v(33): created implicit net for "temp2" File: D:/Final Test/Sub.v Line: 33
+Warning (10236): Verilog HDL Implicit Net warning at Sub.v(34): created implicit net for "temp3" File: D:/Final Test/Sub.v Line: 34
+Warning (10236): Verilog HDL Implicit Net warning at Sub.v(36): created implicit net for "temp102" File: D:/Final Test/Sub.v Line: 36
+Warning (10236): Verilog HDL Implicit Net warning at Sub.v(43): created implicit net for "tempnot3" File: D:/Final Test/Sub.v Line: 43
+Warning (10236): Verilog HDL Implicit Net warning at Sub.v(46): created implicit net for "temp4" File: D:/Final Test/Sub.v Line: 46
+Warning (10236): Verilog HDL Implicit Net warning at Sub.v(47): created implicit net for "temp5" File: D:/Final Test/Sub.v Line: 47
+Warning (10236): Verilog HDL Implicit Net warning at Sub.v(48): created implicit net for "temp6" File: D:/Final Test/Sub.v Line: 48
+Warning (10236): Verilog HDL Implicit Net warning at Sub.v(50): created implicit net for "temp104" File: D:/Final Test/Sub.v Line: 50
+Warning (10236): Verilog HDL Implicit Net warning at Sub.v(55): created implicit net for "tempnot4" File: D:/Final Test/Sub.v Line: 55
+Warning (10236): Verilog HDL Implicit Net warning at Sub.v(58): created implicit net for "temp7" File: D:/Final Test/Sub.v Line: 58
+Warning (10236): Verilog HDL Implicit Net warning at Sub.v(59): created implicit net for "temp8" File: D:/Final Test/Sub.v Line: 59
+Warning (10236): Verilog HDL Implicit Net warning at Sub.v(60): created implicit net for "temp9" File: D:/Final Test/Sub.v Line: 60
+Warning (10236): Verilog HDL Implicit Net warning at Sub.v(61): created implicit net for "temp10" File: D:/Final Test/Sub.v Line: 61
+Warning (10236): Verilog HDL Implicit Net warning at Sub.v(63): created implicit net for "temp106" File: D:/Final Test/Sub.v Line: 63
+Warning (10236): Verilog HDL Implicit Net warning at CLA.v(18): created implicit net for "temp1" File: D:/Final Test/CLA.v Line: 18
+Warning (10236): Verilog HDL Implicit Net warning at CLA.v(31): created implicit net for "temp2" File: D:/Final Test/CLA.v Line: 31
+Warning (10236): Verilog HDL Implicit Net warning at CLA.v(32): created implicit net for "temp3" File: D:/Final Test/CLA.v Line: 32
+Warning (10236): Verilog HDL Implicit Net warning at CLA.v(47): created implicit net for "temp4" File: D:/Final Test/CLA.v Line: 47
+Warning (10236): Verilog HDL Implicit Net warning at CLA.v(48): created implicit net for "temp5" File: D:/Final Test/CLA.v Line: 48
+Warning (10236): Verilog HDL Implicit Net warning at CLA.v(49): created implicit net for "temp6" File: D:/Final Test/CLA.v Line: 49
+Warning (10236): Verilog HDL Implicit Net warning at CLA.v(65): created implicit net for "temp7" File: D:/Final Test/CLA.v Line: 65
+Warning (10236): Verilog HDL Implicit Net warning at CLA.v(66): created implicit net for "temp8" File: D:/Final Test/CLA.v Line: 66
+Warning (10236): Verilog HDL Implicit Net warning at CLA.v(67): created implicit net for "temp9" File: D:/Final Test/CLA.v Line: 67
+Warning (10236): Verilog HDL Implicit Net warning at CLA.v(68): created implicit net for "temp10" File: D:/Final Test/CLA.v Line: 68
+Warning (10236): Verilog HDL Implicit Net warning at Counter_1bit_1.v(13): created implicit net for "temp1" File: D:/Final Test/Counter_1bit_1.v Line: 13
+Warning (10236): Verilog HDL Implicit Net warning at Counter_23bit_1.v(55): created implicit net for "Co4" File: D:/Final Test/Counter_23bit_1.v Line: 55
+Warning (10236): Verilog HDL Implicit Net warning at Counter_23bit_1.v(76): created implicit net for "Co11" File: D:/Final Test/Counter_23bit_1.v Line: 76
+Warning (10236): Verilog HDL Implicit Net warning at Counter_23bit_1.v(85): created implicit net for "Co14" File: D:/Final Test/Counter_23bit_1.v Line: 85
+Warning (10236): Verilog HDL Implicit Net warning at Counter_23bit_1.v(94): created implicit net for "Co17" File: D:/Final Test/Counter_23bit_1.v Line: 94
+Warning (10236): Verilog HDL Implicit Net warning at CLA5bit.v(23): created implicit net for "temp1" File: D:/Final Test/CLA5bit.v Line: 23
+Warning (10236): Verilog HDL Implicit Net warning at CLA5bit.v(36): created implicit net for "temp2" File: D:/Final Test/CLA5bit.v Line: 36
+Warning (10236): Verilog HDL Implicit Net warning at CLA5bit.v(37): created implicit net for "temp3" File: D:/Final Test/CLA5bit.v Line: 37
+Warning (10236): Verilog HDL Implicit Net warning at CLA5bit.v(52): created implicit net for "temp4" File: D:/Final Test/CLA5bit.v Line: 52
+Warning (10236): Verilog HDL Implicit Net warning at CLA5bit.v(53): created implicit net for "temp5" File: D:/Final Test/CLA5bit.v Line: 53
+Warning (10236): Verilog HDL Implicit Net warning at CLA5bit.v(54): created implicit net for "temp6" File: D:/Final Test/CLA5bit.v Line: 54
+Warning (10236): Verilog HDL Implicit Net warning at CLA5bit.v(70): created implicit net for "temp7" File: D:/Final Test/CLA5bit.v Line: 70
+Warning (10236): Verilog HDL Implicit Net warning at CLA5bit.v(71): created implicit net for "temp8" File: D:/Final Test/CLA5bit.v Line: 71
+Warning (10236): Verilog HDL Implicit Net warning at CLA5bit.v(72): created implicit net for "temp9" File: D:/Final Test/CLA5bit.v Line: 72
+Warning (10236): Verilog HDL Implicit Net warning at CLA5bit.v(73): created implicit net for "temp10" File: D:/Final Test/CLA5bit.v Line: 73
+Warning (10236): Verilog HDL Implicit Net warning at CLA5bit.v(88): created implicit net for "temp11" File: D:/Final Test/CLA5bit.v Line: 88
+Warning (10236): Verilog HDL Implicit Net warning at CLA5bit.v(89): created implicit net for "temp12" File: D:/Final Test/CLA5bit.v Line: 89
+Warning (10236): Verilog HDL Implicit Net warning at CLA5bit.v(90): created implicit net for "temp13" File: D:/Final Test/CLA5bit.v Line: 90
+Warning (10236): Verilog HDL Implicit Net warning at CLA5bit.v(91): created implicit net for "temp14" File: D:/Final Test/CLA5bit.v Line: 91
+Warning (10236): Verilog HDL Implicit Net warning at CLA5bit.v(92): created implicit net for "temp15" File: D:/Final Test/CLA5bit.v Line: 92
+Info (12127): Elaborating entity "add_sub_floating" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at add_sub_floating.v(7): object "Fr_A" assigned a value but never read File: D:/Final Test/add_sub_floating.v Line: 7
+Warning (10036): Verilog HDL or VHDL warning at add_sub_floating.v(7): object "Fr_B" assigned a value but never read File: D:/Final Test/add_sub_floating.v Line: 7
+Warning (10036): Verilog HDL or VHDL warning at add_sub_floating.v(9): object "Sign_A" assigned a value but never read File: D:/Final Test/add_sub_floating.v Line: 9
+Warning (10036): Verilog HDL or VHDL warning at add_sub_floating.v(9): object "Sign_B" assigned a value but never read File: D:/Final Test/add_sub_floating.v Line: 9
+Warning (10036): Verilog HDL or VHDL warning at add_sub_floating.v(49): object "compare" assigned a value but never read File: D:/Final Test/add_sub_floating.v Line: 49
+Warning (10230): Verilog HDL assignment warning at add_sub_floating.v(23): truncated value with size 2 to match size of target (1) File: D:/Final Test/add_sub_floating.v Line: 23
+Warning (10230): Verilog HDL assignment warning at add_sub_floating.v(24): truncated value with size 2 to match size of target (1) File: D:/Final Test/add_sub_floating.v Line: 24
+Warning (10230): Verilog HDL assignment warning at add_sub_floating.v(31): truncated value with size 24 to match size of target (16) File: D:/Final Test/add_sub_floating.v Line: 31
+Warning (10230): Verilog HDL assignment warning at add_sub_floating.v(33): truncated value with size 24 to match size of target (16) File: D:/Final Test/add_sub_floating.v Line: 33
+Warning (10034): Output port "Cout" at add_sub_floating.v(6) has no driver File: D:/Final Test/add_sub_floating.v Line: 6
+Info (12128): Elaborating entity "bu2_28bit" for hierarchy "bu2_28bit:bu1" File: D:/Final Test/add_sub_floating.v Line: 38
+Info (12128): Elaborating entity "CLA" for hierarchy "bu2_28bit:bu1|CLA:cla1" File: D:/Final Test/bu2_28bit.v Line: 51
+Info (12128): Elaborating entity "CLA28bits" for hierarchy "CLA28bits:CLA1" File: D:/Final Test/add_sub_floating.v Line: 44
+Info (12128): Elaborating entity "shift24bit" for hierarchy "shift24bit:sh1" File: D:/Final Test/add_sub_floating.v Line: 74
+Info (12128): Elaborating entity "Sub28bits" for hierarchy "Sub28bits:Sub1" File: D:/Final Test/add_sub_floating.v Line: 80
+Info (12128): Elaborating entity "Sub" for hierarchy "Sub28bits:Sub1|Sub:sub1" File: D:/Final Test/Sub28bits.v Line: 24
+Warning (12020): Port "Ci" on the entity instantiation of "cla1" is connected to a signal of width 32. The formal width of the signal in the module is 1.  The extra bits will be ignored. File: D:/Final Test/bu2_28bit.v Line: 51
+Warning (12241): 11 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "Cout" is stuck at GND File: D:/Final Test/add_sub_floating.v Line: 6
+Info (286030): Timing-Driven Synthesis is running
+Info (144001): Generated suppressed messages file D:/Final Test/output_files/FiTe.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 9 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "A[28]" File: D:/Final Test/add_sub_floating.v Line: 3
+    Warning (15610): No output dependent on input pin "A[29]" File: D:/Final Test/add_sub_floating.v Line: 3
+    Warning (15610): No output dependent on input pin "A[30]" File: D:/Final Test/add_sub_floating.v Line: 3
+    Warning (15610): No output dependent on input pin "A[31]" File: D:/Final Test/add_sub_floating.v Line: 3
+    Warning (15610): No output dependent on input pin "B[28]" File: D:/Final Test/add_sub_floating.v Line: 3
+    Warning (15610): No output dependent on input pin "B[29]" File: D:/Final Test/add_sub_floating.v Line: 3
+    Warning (15610): No output dependent on input pin "B[30]" File: D:/Final Test/add_sub_floating.v Line: 3
+    Warning (15610): No output dependent on input pin "B[31]" File: D:/Final Test/add_sub_floating.v Line: 3
+    Warning (15610): No output dependent on input pin "Cin" File: D:/Final Test/add_sub_floating.v Line: 4
+Info (21057): Implemented 891 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 65 input pins
+    Info (21059): Implemented 193 output pins
+    Info (21061): Implemented 633 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 73 warnings
+    Info: Peak virtual memory: 658 megabytes
+    Info: Processing ended: Sat Apr 21 16:29:16 2018
+    Info: Elapsed time: 00:00:26
+    Info: Total CPU time (on all processors): 00:00:54
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in D:/Final Test/output_files/FiTe.map.smsg.
+
+
