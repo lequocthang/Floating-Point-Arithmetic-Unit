@@ -19,7 +19,12 @@ module Brain(O, A, B, Cin, Cout, Fout);
 	assign Sign_B=B[31];
 	assign Exp_A=A[30:23];
 	assign Exp_B=B[30:23];
+	wire [23:0] Full_A, Full_B; //la so day du phan nguyen va phan thap phan 1.xxxx, co tong la 24 bit 
 	
+	assign Full_A[23]= 2'b01; //them bit 1 da chuan hoa 
+	assign Full_B[23]= 2'b01; //them bit 1 da chuan hoa 
+	assign Full_A[22:0]= A[22:0]; //gan  23 bit thap phan 
+	assign Full_B[22:0]= B[22:0]; //gan 23 bit thap phan 
 	
 
 	
@@ -38,8 +43,21 @@ module Brain(O, A, B, Cin, Cout, Fout);
 	
 	
 	//thuc hien phep tru so mu de biet sai so la bao nhieu, va de xet coi am hay duong thi chi xet bit MSB
+	wire cc1,cc2,dogg1, dogg2,r;
+	wire [23:0] diA_B;
+	wire [7:0] w;
 	CLA28bits  CLA1(.A(Exp_A_wide), .B(Exp_B_wide_bu2), .Ci(1'b0), .F(Exp_delta_A));// truong hop A>B
 	CLA28bits  CLA2(.A(Exp_B_wide), .B(Exp_A_wide_bu2),.Ci(1'b0), .F(Exp_delta_B));//truong hop A<B
+	
+	Sub28bits u10000(.A(Full_A), .B(Full_B), .Ci(1'b0), .Co(cc1), .F(diA_B));
+	Sub8bits u20000(.A(Exp_A), .B(Exp_B), .Ci(1'b0), .Co(cc2), .F(w));
+	
+	assign dogg1 = diA_B[23] | diA_B[22] | diA_B[21] | diA_B[20] | diA_B[19] | diA_B[18] | diA_B[17] | diA_B[16] 
+			| diA_B[15] | diA_B[14] | diA_B[13] | diA_B[12] | diA_B[11] | diA_B[10] | diA_B[9] | diA_B[8] 
+			| diA_B[7] | diA_B[6] | diA_B[5] | diA_B[4] | diA_B[3] | diA_B[2] | diA_B[1] | diA_B[0] ;
+	assign dogg2 = w[7] | w[6] | w[5] | w[4] | w[3] | w[2] | w[1] | w[0] ;
+	assign r=~dogg2 & dogg1 | dogg2& Exp_delta_A[8];
+	
 	
 	
 	//lay bit MSB cua Exp_delta_A de kiem tra la am hay duong 
@@ -48,7 +66,7 @@ module Brain(O, A, B, Cin, Cout, Fout);
 //--------------------------------------------------------------------------
 wire [23:0] Fout1, Fout2, Fout3, Fout4, Fout5, Fout6, Fout7, Fout8, Fout9;//cac signal de luu cac ket qua tinh toan cho tung truong hop
 add_sub_floating u1(.A(A), .B(B), .Cin(Cin), .Cout(Cout), .Fout1(Fout1), .Fout2(Fout2), .Fout3(Fout3), .Fout4(Fout4), .Fout5(Fout5), .Fout6(Fout6), .Fout7(Fout7), .Fout8(Fout8));
-Mux4to1 u2(.s(Exp_delta_A[8]), .a(Sign_A), .b(Sign_B), .o(O), .F1(Fout1), .F2(Fout2), .F3(Fout3), .F4(Fout4), .F5(Fout5), .F6(Fout6), .F7(Fout7) ,.F8(Fout8), .Fout(Fout9));
+Mux4to1 u2(.s(r), .a(Sign_A), .b(Sign_B), .o(O), .F1(Fout1), .F2(Fout2), .F3(Fout3), .F4(Fout4), .F5(Fout5), .F6(Fout6), .F7(Fout7) ,.F8(Fout8), .Fout(Fout9));
 
 wire [4:0] count; //so lan can dich sang trai
 Counter_23bit_1 u3(.F(Fout9), .count(count));
@@ -98,8 +116,8 @@ wire [23:0] coo1;
 Sub28bits u5(.A(Exp_final), .B(count_wide), .Ci(1'b0), .Co(coo1), .F(Exp_main));
 
 wire Sign_main;//dau ngo ra ket qua ngo ra
-assign Sign_main= ~Exp_delta_A[8]&Sign_A | Sign_A&Sign_B&~O | Sign_A&~Sign_B&O | Exp_delta_A[8]&~Sign_A&O;
-
+//assign Sign_main= ~Exp_delta_A[8]&Sign_A | Sign_A&Sign_B&~O | Sign_A&~Sign_B&O | Exp_delta_A[8]&~Sign_A&O;
+assign Sign_main = ~O&Sign_B&r | O&~Sign_B&r | Sign_A&~r;
 
 
 
